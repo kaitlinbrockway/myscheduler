@@ -1,0 +1,138 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ * "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ *
+ * Do not use '*= require' in Sass or your other stylesheets will not be able to access the Bootstrap mixins or variables.
+ *
+ */
+
+@import "bootstrap";
+
+
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+//  margin-right: auto;
+//  margin-left: auto;
+}
+
+body, html {
+    height: 100%;
+}
+
+//.wrapperHeader{
+//  //position: relative;
+//  text-align:center;
+//  width:100%;
+//  //background-image:url(images/header.png);
+//  width:1000px;
+//  height:200px;
+//  margin:0 auto;
+//}
+
+.user_index_header_image {
+  //TODO: Find out why none of these following methods work for displaying an image
+  //maybe they need to be precompiled first. in that case try to config.public_file_server.enabled = true
+  // in the current environment file that you are working in . (prob development)
+  //background: url('../../views/user/img/header.jpg')  no-repeat center center;
+  //background-image: url(<%#= image_path 'header.png' %>);
+  //background-image: image-url("header.png");
+  //background: url('<%= asset_path 'header.jpg' %>');
+  overflow-y: hidden;
+}
+
+.wrapperHeader .user_index_header_image{
+  //width: 100vw;
+  //position: relative;
+  //margin-left: -50vw;
+  //left: 50%;
+  width: 100%;
+  margin:0 auto;
+}
+
+.wrapperHeader .user_index_header_image img {
+  width: 1310px; /* the width of the logo image */
+  height: 172px; /* the height of the logo image */
+  margin:0 auto;
+}
+
+.parallax {
+    /* The image used */
+    /*background-image: url("flower_background.png");*/
+
+    /* Set a specific height */
+    min-height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    //height: 50%;
+    //width: 50%;
+}
+
+///*
+// * Shades the backround of the menu item link when a user
+// * hovers over the dropdown option in _navbar.html.erb
+// */
+//.dropdown:hover {
+//    color: black ;
+//    background-color: #C0C0C0  ;//hex color value
+//}
+//
+//.home-navbar-link:hover {
+//    color: black ;
+//    background-color: #C0C0C0  ;//hex color value
+//}
+//
+///*
+// * Shades the backround of the menu item link when a user
+// * hovers over the links within one of the dropdown options
+// * in _navbar.html.erb
+// */
+//#bs-example-navbar-collapse-1 .dropdown-menu-item:hover {
+//    color: black ;
+//    background-color: #C0C0C0 ;//hex color value
+//}
+//
+//#bs-example-navbar-collapse-1 a.dropdown-menu-item-to-index-path:hover {
+//    color: blue ;
+//    backround-color: #C0C0C0 ;
+//}
+//
+///*
+// * Displays the submenu when the parent is hovered over.
+// * Located in the navigation bar.
+// */
+//.dropdown-submenu:hover>.dropdown-menu {
+//    display: block;
+//}
+//
+///*
+// * Positions the submenu popup to popup located
+// * near the parent item that triggers the menu.
+// */
+//.dropdown-submenu {
+//    position: relative;
+//}
+///*
+// * Defines the position of the popup sub-menu
+// * relative to the parent item that was hovered over.
+// */
+//.dropdown-submenu>.dropdown-menu {
+//    top: -50px;
+//    right: 100%; //causes the popup sub-menu to present on the left.
+//    margin-top: -40px; //aligns the top of the popup menu to lay 12px above the parent selected.
+//    margin-left: 0px;
+//    border-radius: 0 6px 6px 6px;
+//}

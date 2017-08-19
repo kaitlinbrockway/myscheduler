@@ -1,0 +1,65 @@
+<nav class="container parrallax navbar navbar-default" id="navbar" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+        <!--<span class="sr-only">Toggle navigation</span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+      <!--</button>-->
+    </div>
+
+
+    <!--<div class="parallax">-->
+    <!--<%#=  image_tag('header.png') %>-->
+    <!--</div>-->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <!--  Navigation Drop Down Menus  -->
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="home-navbar-link" >
+          <%#= link_to "Home", root_path %>
+        </li>
+
+        <!-- Contact Info Dropdown Menu -->
+        <li class="dropdown" id="dropdown-list">
+          <%= link_to "Contact Information <b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>
+          <ul class="dropdown-menu">
+            <%#= link_to "Contact Us", products_path, class: "dropdown-menu-item"  %>
+            <li class="divider"></li>
+            <li>Phone: 303-953-0640</li>
+            <li class="divider"></li>
+            <li>Email: DenverTentRentals@gmail.com</li>
+          </ul>
+        </li>
+        <!-- END Contact Info Dropdown Menu -->
+
+        <!-- Available Sizes Drop Down Menu -->
+        <li class="dropdown" id="dropdown-list">
+          <%= link_to "Available Sizes <b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>
+          <ul class="dropdown-menu multi-level" role="menu">
+            <%#= link_to "Contact Us", products_path, class: "dropdown-menu-item"  %>
+            <li class="divider"></li>
+            <li>20’ x 20’ Elite Pole Tent</li>
+            <%#*<li class="dropdown-submenu">%>
+            <%#*<a><b class="caret-right"></b>20’ x 20’ Elite Pole Tent</a>%>
+            <%#*<ul class="dropdown-menu">%>
+            <%#*<li class="divider"></li>%>
+            <%#*<li>Maximum (table-seated) occupancy = 55 attendees</li>%>
+            <%#*</ul>%>
+            <%#*</li>%>
+            <li class="divider"></li>
+            <li>20’ x 30’ Elite Pole Tent</li>
+            <li class="divider"></li>
+            <li>20’ x 40’ Elite Pole Tent</li>
+            <li class="divider"></li>
+            <li><%#= link_to "View More Details", products_path, class: "dropdown-menu-item" %></li>
+          </ul>
+        </li>
+        <!-- END Available Sizes Drop Down Menu -->
+      </ul>
+      <!--  END Navigation Drop Down Menus  -->
+    </div>
+  </div>
+</nav>

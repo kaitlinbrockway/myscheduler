@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myschedule</title>
-    <%= csrf_meta_tags %>
+    <title>My Schedule</title>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %>
+    <!-- TODO: Check what changing "reload" to true does -->
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <%= csrf_meta_tags %>
+    <%= yield :head %>
   </head>
 
-  <body>
-    <%= yield %>
+  <!-- TODO : set the controller_name and action_name variable or change variable names
+  to pass those that are already automatically passed -->
+  <body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
+    <%= render 'layouts/navbar' %>
+
+    <div class="container">
+      <!-- TODO: put in flash and bread crumbs  AND section for loading graphics -->
+      <%= yield %>
+    </div>
+
+    <div class="modal fade" id="ajax-modal" role="dialog" aria-hidden="true"></div>
   </body>
 </html>
