@@ -21,21 +21,22 @@ class ApplicationController < ActionController::Base
   #   redirect_to root_path, alert: I18n.t(:flash_access_denied)
   # end
   #
-  # ##
-  # # Home simply checks if the user is signed in or not and redirects to the event path based on
-  # # whether or not @current_event exists, and renders the devise layout if the user
-  # # is not signed in to allow for login.
-  # def home
-  #   if user_signed_in?
-  #     #add the current user's id to cookies in order to set up
-  #     #an authorized connection to the websocket.
-  #     cookies.signed[:user_id] = @current_user.id
-  #     redirect_to events_path
-  #   else
-  #     cookies.signed[:user_id] = nil
-  #     redirect_to sign_in_path
-  #   end
-  # end
+
+  ##
+  # If the user is signed in then they are redirected to their main page,
+  # otherwise they will be prompted with the devise login page.
+  def home
+    if user_signed_in?
+      #add the current user's id to cookies in order to set up
+      #an authorized connection to the websocket.
+      # cookies.signed[:user_id] = @current_user.id
+      redirect_to user_index_path
+    else
+      # cookies.signed[:user_id] = nil
+      redirect_to new_user_session_path
+    end
+  end
+
   #
   # ##
   # # Helper method for displaying object errors

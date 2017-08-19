@@ -32,13 +32,28 @@
     </div>
 
 
+
     <!--<div class="parallax">-->
       <div class="panel panel-default">
         <div class="panel-heading">
           <h1>All Users</h1>
         </div>
         <div class="panel-body">
-          <h2>Having an event? Let Denver Tent Rentals help!</h2>
+          <div class="container-fluid">
+            <% if @users.present? %>
+              <% @users.each do |user| %>
+                <div class="row">
+                  <div class="col-sm-3 grey-border-lr"><%= user.first_name %></div>
+                  <div class="col-sm-3 grey-border-r"><%= user.last_name %></div>
+                  <div class="col-sm-3 grey-border-r"><%= user.email %></div>
+                  <!-- TODO: Add if can edit, delete and/or other rights -->
+                </div>
+              <% end %>
+            <% else %>
+              <!-- TODO: Users empty message -->
+
+            <% end %>
+          </div>
         </div>
         <div class="panel-footer">
           <!-- Links to some other things here********************* FB Website, Advirtisements, other pages within this site, help menu -->

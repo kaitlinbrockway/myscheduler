@@ -1,65 +1,161 @@
-<nav class="container parrallax navbar navbar-default" id="navbar" role="navigation">
-  <div class="container-fluid">
+<!--<div class="row">-->
+<nav class="navbar navbar-default">
+  <div class="containeir-fluid">
     <div class="navbar-header">
-      <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!--<nav class="col-md-9" role="main">-->
+
+    <!--<nav class="container parrallax navbar navbar-default navbar-fixed-top" id="navbar" role="navigation">-->
+      <!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+      <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header"> <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a href="#" class="navbar-brand">Brand</a> </div>-->
+
+        <!--&lt;!&ndash;<ul class="nav navbar-nav">&ndash;&gt;-->
+          <!--&lt;!&ndash;<li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<#%= link_to "Home", root_path %>&ndash;&gt;-->
+          <!--&lt;!&ndash;</li>&ndash;&gt;-->
+          <!--&lt;!&ndash;<li>&ndash;&gt;-->
+            <!--&lt;!&ndash;<#%= link_to "Logout", destroy_user_session_path %>&ndash;&gt;-->
+          <!--&lt;!&ndash;</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+
+      <!--</div>-->
+
+
+      <!--<ol class="breadcrumb">-->
+        <!--<li><a href="#">Home</a></li>-->
+        <!--<li><a href="#">Library</a></li>-->
+        <!--<li class="active">Data</li>-->
+      <!--</ol>-->
+        <!--<div class="navbar-header">-->
+          <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+            <!--<span class="sr-only">Toggle navigation</span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+            <!--<span class="icon-bar"></span>-->
+          <!--</button>-->
+        <!--</div>-->
+
+
+        <!--&lt;!&ndash;<div class="parallax">&ndash;&gt;-->
+        <!--&lt;!&ndash;<%#=  image_tag('header.png') %>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+          <!--&lt;!&ndash;  Navigation Drop Down Menus  &ndash;&gt;-->
+          <!--<ul class="nav navbar-nav navbar-right">-->
+
+            <!--<li>-->
+
+            <!--</li>-->
+            <!--<li class="home-navbar-link" >-->
+              <!--<%#= link_to "Home", root_path %>-->
+            <!--</li>-->
+
+            <!--&lt;!&ndash; Contact Info Dropdown Menu &ndash;&gt;-->
+            <!--<li class="dropdown" id="dropdown-list">-->
+              <!--<%#= link_to "Contact Information <b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>-->
+              <!--<ul class="dropdown-menu">-->
+                <!--<%#= link_to "Contact Us", products_path, class: "dropdown-menu-item"  %>-->
+                <!--<li class="divider"></li>-->
+                <!--<li>Phone: 303-953-0640</li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li>Email: DenverTentRentals@gmail.com</li>-->
+              <!--</ul>-->
+            <!--</li>-->
+            <!--&lt;!&ndash; END Contact Info Dropdown Menu &ndash;&gt;-->
+
+            <!--&lt;!&ndash; Available Sizes Drop Down Menu &ndash;&gt;-->
+            <!--<li class="dropdown" id="dropdown-list">-->
+              <!--<%#= link_to "Available Sizes <b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>-->
+              <!--<ul class="dropdown-menu multi-level" role="menu">-->
+                <!--<%#= link_to "Contact Us", products_path, class: "dropdown-menu-item"  %>-->
+                <!--<li class="divider"></li>-->
+                <!--<li>20’ x 20’ Elite Pole Tent</li>-->
+                <!--<%#*<li class="dropdown-submenu">%>-->
+                <!--<%#*<a><b class="caret-right"></b>20’ x 20’ Elite Pole Tent</a>%>-->
+                <!--<%#*<ul class="dropdown-menu">%>-->
+                <!--<%#*<li class="divider"></li>%>-->
+                <!--<%#*<li>Maximum (table-seated) occupancy = 55 attendees</li>%>-->
+                <!--<%#*</ul>%>-->
+                <!--<%#*</li>%>-->
+                <!--<li class="divider"></li>-->
+                <!--<li>20’ x 30’ Elite Pole Tent</li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li>20’ x 40’ Elite Pole Tent</li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><%#= link_to "View More Details", products_path, class: "dropdown-menu-item" %></li>-->
+              <!--</ul>-->
+            <!--</li>-->
+            <!--&lt;!&ndash; END Available Sizes Drop Down Menu &ndash;&gt;-->
+          <!--</ul>-->
+          <!--&lt;!&ndash;  END Navigation Drop Down Menus  &ndash;&gt;-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</nav>-->
+
+<!--<nav class="navbar navbar-default">-->
+  <!--<div class="container-fluid">-->
+    <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+    <!--<div class="navbar-header">-->
+      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
         <!--<span class="sr-only">Toggle navigation</span>-->
         <!--<span class="icon-bar"></span>-->
         <!--<span class="icon-bar"></span>-->
         <!--<span class="icon-bar"></span>-->
       <!--</button>-->
-    </div>
-
-
-    <!--<div class="parallax">-->
-    <!--<%#=  image_tag('header.png') %>-->
+      <!--<a class="navbar-brand" href="#">Brand</a>-->
     <!--</div>-->
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <!--  Navigation Drop Down Menus  -->
-      <ul class="nav navbar-nav navbar-right">
-
-        <li class="home-navbar-link" >
-          <%#= link_to "Home", root_path %>
-        </li>
-
-        <!-- Contact Info Dropdown Menu -->
-        <li class="dropdown" id="dropdown-list">
-          <%= link_to "Contact Information <b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>
-          <ul class="dropdown-menu">
-            <%#= link_to "Contact Us", products_path, class: "dropdown-menu-item"  %>
-            <li class="divider"></li>
-            <li>Phone: 303-953-0640</li>
-            <li class="divider"></li>
-            <li>Email: DenverTentRentals@gmail.com</li>
-          </ul>
-        </li>
-        <!-- END Contact Info Dropdown Menu -->
-
-        <!-- Available Sizes Drop Down Menu -->
-        <li class="dropdown" id="dropdown-list">
-          <%= link_to "Available Sizes <b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', data: { toggle: 'dropdown' } %>
-          <ul class="dropdown-menu multi-level" role="menu">
-            <%#= link_to "Contact Us", products_path, class: "dropdown-menu-item"  %>
-            <li class="divider"></li>
-            <li>20’ x 20’ Elite Pole Tent</li>
-            <%#*<li class="dropdown-submenu">%>
-            <%#*<a><b class="caret-right"></b>20’ x 20’ Elite Pole Tent</a>%>
-            <%#*<ul class="dropdown-menu">%>
-            <%#*<li class="divider"></li>%>
-            <%#*<li>Maximum (table-seated) occupancy = 55 attendees</li>%>
-            <%#*</ul>%>
-            <%#*</li>%>
-            <li class="divider"></li>
-            <li>20’ x 30’ Elite Pole Tent</li>
-            <li class="divider"></li>
-            <li>20’ x 40’ Elite Pole Tent</li>
-            <li class="divider"></li>
-            <li><%#= link_to "View More Details", products_path, class: "dropdown-menu-item" %></li>
-          </ul>
-        </li>
-        <!-- END Available Sizes Drop Down Menu -->
-      </ul>
-      <!--  END Navigation Drop Down Menus  -->
-    </div>
-  </div>
-</nav>
+    <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+      <!--<ul class="nav navbar-nav">-->
+        <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+        <!--<li><a href="#">Link</a></li>-->
+        <!--<li class="dropdown">-->
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+          <!--<ul class="dropdown-menu">-->
+            <!--<li><a href="#">Action</a></li>-->
+            <!--<li><a href="#">Another action</a></li>-->
+            <!--<li><a href="#">Something else here</a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">Separated link</a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">One more separated link</a></li>-->
+          <!--</ul>-->
+        <!--</li>-->
+      <!--</ul>-->
+      <!--<form class="navbar-form navbar-left">-->
+        <!--<div class="form-group">-->
+          <!--<input type="text" class="form-control" placeholder="Search">-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+      <!--</form>-->
+      <!--<ul class="nav navbar-nav navbar-right">-->
+        <!--<li><a href="#">Link</a></li>-->
+        <!--<li class="dropdown">-->
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+          <!--<ul class="dropdown-menu">-->
+            <!--<li><a href="#">Action</a></li>-->
+            <!--<li><a href="#">Another action</a></li>-->
+            <!--<li><a href="#">Something else here</a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">Separated link</a></li>-->
+          <!--</ul>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+  <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+  <!--</nav>-->
+<!--</div>-->
