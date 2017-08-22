@@ -1,13 +1,17 @@
 <nav class="navbar navbar-default">
-  <div class="containeir-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><%= link_to "Logout", destroy_user_session_path %></li>
-      <li><a href="#">Page 2</a></li>
-      <li><%= link_to "Home", root_path %></li>
-    </ul>
-  </div>
+  <!--<div class="container">-->
+    <!--<div class="navbar-header">-->
+      <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+    <!--</div>-->
+
+    <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+      <ul class="nav">
+        <li class="nav-item active"><a href="#">Home</a></li>
+        <li class="nav-item"><%= link_to "Logout", destroy_user_session_path %></li>
+        <li class="nav-item"><a href="#">Page 2</a></li>
+        <li class="nav-item"><%= link_to "Home", root_path %></li>
+      </ul>
+    <!--</div>-->
+
+  <!--</div>-->
 </nav>

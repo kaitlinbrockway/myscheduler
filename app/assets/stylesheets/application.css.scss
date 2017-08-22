@@ -18,6 +18,9 @@
 
 @import "bootstrap";
 
+//nav {
+//  display: block;
+//}
 
 .container {
   padding-right: 10px;
@@ -28,6 +31,25 @@
 
 body, html {
     height: 100%;
+}
+
+ul.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+li {
+  float: left;
+  display: inline;
+}
+
+a {
+  display: inline-flex;
+  padding: 8px;
+  background-color: #dddddd;
 }
 
 //.wrapperHeader{
@@ -41,6 +63,7 @@ body, html {
 //}
 
 .user_index_header_image {
+  display: inline-flex;
   //TODO: Find out why none of these following methods work for displaying an image
   //maybe they need to be precompiled first. in that case try to config.public_file_server.enabled = true
   // in the current environment file that you are working in . (prob development)
@@ -48,7 +71,7 @@ body, html {
   //background-image: url(<%#= image_path 'header.png' %>);
   //background-image: image-url("header.png");
   //background: url('<%= asset_path 'header.jpg' %>');
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .wrapperHeader, .user_index_header_image{
@@ -87,6 +110,15 @@ img {
 
 .grey-border-lr {
   border-left: 3px solid #ccc;
+}
+
+.icon-link {
+  padding: 20px;
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  text-decoration: none;
 }
 
 ///*
