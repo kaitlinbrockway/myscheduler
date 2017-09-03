@@ -36,7 +36,15 @@
     <!--<div class="parallax">-->
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h1>All Users</h1>
+          <!--<h1>All Users</h1>-->
+
+          <div class="row">
+            <div class="col-sm-3"><b>First Name</b></div>
+            <div class="col-sm-3"><b>Last Name</b></div>
+            <div class="col-sm-3"><b>Email</b></div>
+            <!--<div class="col-sm-3"><b>Role</b></div>-->
+            <!-- TODO: Add if can edit, delete and/or other rights -->
+          </div>
         </div>
         <div class="panel-body">
           <div class="container-fluid">
@@ -46,6 +54,7 @@
                   <div class="col-sm-3 grey-border-lr"><%= user.first_name %></div>
                   <div class="col-sm-3 grey-border-r"><%= user.last_name %></div>
                   <div class="col-sm-3 grey-border-r"><%= user.email %></div>
+                  <!--<div class="col-sm-3">TBA</div>-->
                   <!-- TODO: Add if can edit, delete and/or other rights -->
                 </div>
               <% end %>
@@ -56,8 +65,8 @@
           </div>
         </div>
         <div class="panel-footer">
-          <a target="_blank" title="Find us on Facebook" href="https://www.instagram.com/bouldertentrentals/"><%= image_tag('facebook.png', class: 'icon-link', alt: 'Follow me on Facebook') %></a>
-          <a target="_blank" title="Find us on Instagram" href="https://www.instagram.com/bouldertentrentals/"><%= image_tag('instagram.png', class: 'icon-link', alt: 'Follow me on Instagram') %></a>
+          <a target="_blank" title="Find us on Facebook" href="https://www.facebook.com/DenverTentRentals/"><%= image_tag('facebook.png', class: 'icon-link', alt: 'Follow me on Facebook') %></a>
+          <a target="_blank" title="Find us on Instagram" href="https://www.instagram.com/denvertentrentals/"><%= image_tag('instagram.png', class: 'icon-link', alt: 'Follow me on Instagram') %></a>
 
           <!--  TODO: Add links for: help menu, map -->
         </div>

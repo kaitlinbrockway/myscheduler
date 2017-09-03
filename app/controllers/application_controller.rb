@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   # before_action :configure_permitted_parameters, if: :devise_controller?
   #
 
@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
       #add the current user's id to cookies in order to set up
       #an authorized connection to the websocket.
       # cookies.signed[:user_id] = @current_user.id
-      redirect_to user_index_path
+      redirect_to users_index_path
     else
       # cookies.signed[:user_id] = nil
       redirect_to new_user_session_path
