@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>All Registered Tent Rental Users</title>
+
+    <!-- meta data about the content/data. -->
+    <meta charset="utf-8">
+    <meta name="description" content="All Users registered to use My Schedule">
+    <meta name="keywords" content="Schedule Events User Account Date Time Appointment Organize">
+    <meta name="author" content="Kaitlin Brockway">
+  </head>
+
+  <body>
+    <!--<div class="parallax">-->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            <%= image_tag 'users_header_text.png', :class => "img-responsive center-block" %>
+        </div>
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-sm-3"><b><%= t(:first_name) %></b></div>
+            <div class="col-sm-3"><b><%= t(:last_name) %></b></div>
+            <div class="col-sm-3"><b><%= t(:email) %></b></div>
+            <div class="col-sm-3"><b><%= t(:actions) %></b></div>
+            <!--TODO <div class="col-sm-3"><b>Role</b></div>-->
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="container-fluid">
+            <% if @users.present? %>
+              <% @users.each do |user| %>
+                <!-- Make sure current_user can read this specific user -->
+                <% if (can? :read, user) %>
+                  <div class="row index_border_bottom">
+                    <!-- grey-border-lr -->
+                    <div class="col-sm-3"><%= user.first_name %></div>
+                    <div class="col-sm-3"><%= user.last_name %></div>
+                    <div class="col-sm-3"><%= user.email %></div>
+                    <div class="col-sm-3">
+                      <% if (can? :update, user) %>
+                        <%= link_to t(:edit), edit_user_path(user.id) %> &nbsp; <!-- &nbsp; before adding new actions-->
+                      <% end %>
+                    </div>
+                  </div>
+                <% end %>
+                <!-- END temp user -->
+              <% end %>
+            <% else %>
+                <b><%= t(:users_empty_message) %></b>
+            <% end %>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <!--<a target="_blank" title="Find us on Facebook" href="https://www.facebook.com/DenverTentRentals/"><%= image_tag('facebook.png', class: 'icon-link', alt: 'Follow me on Facebook') %></a>-->
+          <!--<a target="_blank" title="Find us on Instagram" href="https://www.instagram.com/denvertentrentals/"><%= image_tag('instagram.png', class: 'icon-link', alt: 'Follow me on Instagram') %></a>-->
+          <% if (can? :create, User) %>
+              <!-- Users::RegistrationsController#new as HTML -->
+              <%= link_to "Create New User", new_user_registration_path(), class: 'btn btn-primary' %>
+          <% end %>
+          <!--  TODO: Add links for: help menu, map -->
+        </div>
+      </div>
+    <!--</div>-->
+
+  </body>
+</html>

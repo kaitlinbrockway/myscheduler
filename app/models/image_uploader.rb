@@ -1,2 +1,0 @@
-class ImageUploader < ApplicationRecord
-end

@@ -18,15 +18,9 @@
 
 @import "bootstrap";
 
-//nav {
-//  display: block;
-//}
-
 .container {
   padding-right: 10px;
   padding-left: 10px;
-//  margin-right: auto;
-//  margin-left: auto;
 }
 
 body, html {
@@ -52,41 +46,9 @@ a {
   background-color: #dddddd;
 }
 
-//.wrapperHeader{
-//  //position: relative;
-//  text-align:center;
-//  width:100%;
-//  //background-image:url(images/header.png);
-//  width:1000px;
-//  height:200px;
-//  margin:0 auto;
-//}
-
-.user_index_header_image {
-  display: inline-flex;
-  //TODO: Find out why none of these following methods work for displaying an image
-  //maybe they need to be precompiled first. in that case try to config.public_file_server.enabled = true
-  // in the current environment file that you are working in . (prob development)
-  //background: url('../../views/user/img/header.jpg')  no-repeat center center;
-  //background-image: url(<%#= image_path 'header.png' %>);
-  //background-image: image-url("header.png");
-  //background: url('<%= asset_path 'header.jpg' %>');
-  overflow-x: hidden;
-}
-
-.wrapperHeader, .user_index_header_image{
-  //width: 100vw;
-  //position: relative;
-  //margin-left: -50vw;
-  //left: 50%;
-  width: 100%;
-  margin:0 auto;
-}
-
-img {
-  width: 1310px; /* the width of the logo image */
-  height: 172px; /* the height of the logo image */
-  margin:0 auto;
+.index_border_bottom {
+  border-bottom-style: solid;
+  border-bottom-color: #dad7d7;
 }
 
 .parallax {
@@ -104,16 +66,9 @@ img {
     //width: 50%;
 }
 
-.grey-border-r, .grey-border-lr {
-  border-right: 3px solid #ccc;
-  overflow: hidden;
-}
-
-.grey-border-lr {
-  border-left: 3px solid #ccc;
-  overflow: hidden;
-}
-
+/*
+  Facebook & Instagram Icons
+ */
 .icon-link {
   padding: 20px;
   font-size: 30px;
@@ -123,6 +78,60 @@ img {
   text-decoration: none;
 }
 
+
+
+
+
+// bootstrap default css
+//.img-responsive {
+//  max-width: 100%;
+//  height: auto;
+//  display: block;
+//}
+
+
+
+
+//.grey-border-r, .grey-border-lr {
+//  border-right: 3px solid #ccc;
+//  overflow: hidden;
+//}
+//
+//.grey-border-lr {
+//  border-left: 3px solid #ccc;
+//  overflow: hidden;
+//}
+
+
+//.user_index_header_image {
+//  display: inline-flex;
+//  //TODO: Find out why none of these following methods work for displaying an image
+//  //maybe they need to be precompiled first. in that case try to config.public_file_server.enabled = true
+//  // in the current environment file that you are working in . (prob development)
+//  //background: url('../../views/user/img/header.jpg')  no-repeat center center;
+//  //background-image: url(<%#= image_path 'header.png' %>);
+//  //background-image: image-url("header.png");
+//  //background: url('<%= asset_path 'header.jpg' %>');
+//  overflow-x: hidden;
+//}
+//
+//.wrapperHeader, .user_index_header_image{
+//  //width: 100vw;
+//  //position: relative;
+//  //margin-left: -50vw;
+//  //left: 50%;
+//  //width: 50%;
+//  //margin:0 auto;
+//  align-content: center;
+//  -webkit-align-content: center;
+//}
+
+
+//img {
+//  width: 562px; /* the width of the logo image */
+//  height: 174px; /* the height of the logo image */
+//  margin:0 auto;
+//}
 ///*
 // * Shades the backround of the menu item link when a user
 // * hovers over the dropdown option in _navbar.html.erb
