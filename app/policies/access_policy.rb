@@ -16,7 +16,7 @@ class AccessPolicy
     # In this case an administrator.
     #
     role :admin, { role: "admin" } do
-      can [:create, :update, :destroy], User
+      can [:create, :update, :destroy, :change_role], User
     end
     # role :admin, proc { |user| user.admin? } do
     #   can [:update, :destroy], User

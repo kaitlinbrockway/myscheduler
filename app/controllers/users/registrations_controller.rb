@@ -43,8 +43,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def edit
+    authorize! :update, User
+    super
+  end
 
   def update
+    authorize! :update, User
     params.permit(:first_name, :last_name, :role)
     super
   end

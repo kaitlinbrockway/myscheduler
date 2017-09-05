@@ -29,10 +29,15 @@
           <%= f.email_field :email, required: true, autofocus: true %>
         </div>
 
-        <div class="field" >
-          <%= f.label :role %><br />
-          <%= f.select :role, options_for_select(['admin', 'employee', 'guest'], resource.role )%>
-        </div>
+        <%# ONLY Admin users may change user roles %>
+        <% if (can? :change_role, User) %>
+          <div class="field" >
+            <%= f.label :role %><br />
+            <%= f.select :role, options_for_select(['admin', 'employee', 'guest'], resource.role )%>
+          </div>
+        <% else %>
+          <%= f.hidden_field :role, :value => resource.role %>
+        <% end %>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
