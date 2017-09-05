@@ -17,7 +17,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # a new account or when a user is registering a new
   # user account for a different user when logged in.
   def new
-    authorize! :create, User
     @user = User.new
     new_user_params
   end

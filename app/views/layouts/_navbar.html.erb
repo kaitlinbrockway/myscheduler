@@ -8,20 +8,12 @@
 
     <div class="navbar-collapse">
 
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown" role="menu"><%= link_to t(:view_all_users), users_path %></li>
-        </ul>
-
-        <ul class="navbar-nav">
-          <% if (can? :read, User) %>
-              <li class="nav-item dropdown" role="menu"><%= link_to t(:view_all_users), users_path %></li>
-          <% end %>
-        </ul>
+        <!--<ul class="navbar-nav">-->
+          <!--<li class="nav-item dropdown" role="menu"><%#= link_to t(:view_all_users), users_path %></li>-->
+        <!--</ul>-->
 
 
-        <!-- Add 'nav' for non-links-->
         <ul class="nav navbar-nav navbar-right">
-
           <li class="dropdown" >
             <%# Navbar label that expands Sub-Menu-1 on click %>
             <%= link_to "My Account".html_safe, '#', class: 'dropdown-toggle', data: {toggle: 'dropdown'} %>
@@ -36,29 +28,25 @@
         </ul>
 
 
-      <!-- Add 'nav' for non-links-->
-      <ul class="nav navbar-nav navbar-right">
+      <% if (can? :read, User) %>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" >
+            <%# Navbar label that expands options on click %>
+            <%= link_to "All Users".html_safe, '#', class: 'dropdown-toggle', data: {toggle: 'dropdown'} %>
 
-        <li class="dropdown" >
-          <%# Navbar label that expands options on click %>
-          <%= link_to "All Users".html_safe, '#', class: 'dropdown-toggle', data: {toggle: 'dropdown'} %>
-
-
-          <ul class="dropdown-menu multi-level dropdown-content">
-            <li><%= link_to t(:view_all_users), users_path %></li>
-            <li class="divider"></li>
-            <% if (can? :update, User) %>
-                <% User.all.each do |user| %>
-                    <% if (can? :update, User) %>
-                        <li><%= link_to "Edit #{user.first_name} #{user.last_name}", edit_user_path(user), class: "dropdown-menu-item" %> </li>
-                        <li class="divider"></li>
-                    <% end %>
-                <% end %>
-            <% end %>
-          </ul>
-
-        </li>
-      </ul>
+            <ul class="dropdown-menu multi-level dropdown-content">
+              <li><%= link_to t(:view_all_users), users_path %></li>
+              <li class="divider"></li>
+              <% if (can? :update, User) %>
+                  <% User.all.each do |user| %>
+                    <li><%= link_to "Edit #{user.first_name} #{user.last_name}", edit_user_path(user), class: "dropdown-menu-item" %> </li>
+                    <li class="divider"></li>
+                  <% end %>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      <% end %>
 
 
     </div>
