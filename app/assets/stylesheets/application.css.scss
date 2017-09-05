@@ -27,19 +27,6 @@ body, html {
     height: 100%;
 }
 
-ul.navbar-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-
-}
-
-li {
-  float: left;
-  display: inline;
-}
-
 a {
   display: inline-flex;
   padding: 8px;
@@ -78,112 +65,55 @@ a {
   text-decoration: none;
 }
 
+/*
+ * Shades the backround of the menu item on hover.
+ *
+ */
+.dropdown:hover {
+  color: black ;
+  background-color: #C0C0C0 ;
+}
 
 
+/*
+ * Shades the backround of the menu item link when a user
+ * hovers over the links within one of the dropdown options
+ * in _navbar.html.erb
+ */
+#bs-example-navbar-collapse-1 .dropdown-menu-item:hover {
+  color: black ;
+  background-color: #C0C0C0 ;//hex color value
+}
 
+#bs-example-navbar-collapse-1 a.dropdown-menu-item-to-index-path:hover {
+  color: blue ;
+  backround-color: #C0C0C0 ;
+}
 
-// bootstrap default css
-//.img-responsive {
-//  max-width: 100%;
-//  height: auto;
-//  display: block;
-//}
+/*
+ * Displays the submenu when the parent is hovered over.
+ * Located in the navigation bar.
+ */
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
 
+/*
+ * Positions the submenu popup to popup located
+ * near the parent item that triggers the menu.
+ */
+.dropdown-submenu {
+  position: relative;
+}
 
-
-
-//.grey-border-r, .grey-border-lr {
-//  border-right: 3px solid #ccc;
-//  overflow: hidden;
-//}
-//
-//.grey-border-lr {
-//  border-left: 3px solid #ccc;
-//  overflow: hidden;
-//}
-
-
-//.user_index_header_image {
-//  display: inline-flex;
-//  //TODO: Find out why none of these following methods work for displaying an image
-//  //maybe they need to be precompiled first. in that case try to config.public_file_server.enabled = true
-//  // in the current environment file that you are working in . (prob development)
-//  //background: url('../../views/user/img/header.jpg')  no-repeat center center;
-//  //background-image: url(<%#= image_path 'header.png' %>);
-//  //background-image: image-url("header.png");
-//  //background: url('<%= asset_path 'header.jpg' %>');
-//  overflow-x: hidden;
-//}
-//
-//.wrapperHeader, .user_index_header_image{
-//  //width: 100vw;
-//  //position: relative;
-//  //margin-left: -50vw;
-//  //left: 50%;
-//  //width: 50%;
-//  //margin:0 auto;
-//  align-content: center;
-//  -webkit-align-content: center;
-//}
-
-
-//img {
-//  width: 562px; /* the width of the logo image */
-//  height: 174px; /* the height of the logo image */
-//  margin:0 auto;
-//}
-///*
-// * Shades the backround of the menu item link when a user
-// * hovers over the dropdown option in _navbar.html.erb
-// */
-//.dropdown:hover {
-//    color: black ;
-//    background-color: #C0C0C0  ;//hex color value
-//}
-//
-//.home-navbar-link:hover {
-//    color: black ;
-//    background-color: #C0C0C0  ;//hex color value
-//}
-//
-///*
-// * Shades the backround of the menu item link when a user
-// * hovers over the links within one of the dropdown options
-// * in _navbar.html.erb
-// */
-//#bs-example-navbar-collapse-1 .dropdown-menu-item:hover {
-//    color: black ;
-//    background-color: #C0C0C0 ;//hex color value
-//}
-//
-//#bs-example-navbar-collapse-1 a.dropdown-menu-item-to-index-path:hover {
-//    color: blue ;
-//    backround-color: #C0C0C0 ;
-//}
-//
-///*
-// * Displays the submenu when the parent is hovered over.
-// * Located in the navigation bar.
-// */
-//.dropdown-submenu:hover>.dropdown-menu {
-//    display: block;
-//}
-//
-///*
-// * Positions the submenu popup to popup located
-// * near the parent item that triggers the menu.
-// */
-//.dropdown-submenu {
-//    position: relative;
-//}
-///*
-// * Defines the position of the popup sub-menu
-// * relative to the parent item that was hovered over.
-// */
-//.dropdown-submenu>.dropdown-menu {
-//    top: -50px;
-//    right: 100%; //causes the popup sub-menu to present on the left.
-//    margin-top: -40px; //aligns the top of the popup menu to lay 12px above the parent selected.
-//    margin-left: 0px;
-//    border-radius: 0 6px 6px 6px;
-//}
+/*
+ * Defines the position of the popup sub-menu
+ * relative to the parent item that was hovered over.
+ */
+.dropdown-submenu>.dropdown-menu.dropdown-content {
+  top: -50px;
+  right: 100%; //causes the popup sub-menu to present on the left.
+  margin-top: -40px; //aligns the top of the popup menu to lay 12px above the parent selected.
+  margin-left: 0px;
+  border-radius: 0 6px 6px 6px;
+}

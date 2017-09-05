@@ -38,3 +38,4 @@ en:
   last_name: "Last Name"
   pg_access_denied_msg: "You do not have permission to access the page you have requested."
   users_empty_message: "There are currently no Users to display."
+  view_all_users: "View All Users"
