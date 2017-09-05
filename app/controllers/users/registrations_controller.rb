@@ -6,7 +6,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def index
     authorize! :read, User
     params = permit_params_with_sortable
-    @users = User.all.select(:id, :first_name, :last_name, :email).sort_by &:first_name
+    @users = User.all.select(:id, :first_name, :last_name, :email, :role).sort_by &:first_name
     # TODO: Add sortable columns
   end
 

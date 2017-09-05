@@ -19,9 +19,9 @@
         </div>
         <div class="panel-heading">
           <div class="row">
-            <div class="col-sm-3"><b><%= t(:first_name) %></b></div>
-            <div class="col-sm-3"><b><%= t(:last_name) %></b></div>
+            <div class="col-sm-3"><b><%= t(:name) %></b></div>
             <div class="col-sm-3"><b><%= t(:email) %></b></div>
+            <div class="col-sm-3"><b><%= t(:role) %></b></div>
             <div class="col-sm-3"><b><%= t(:actions) %></b></div>
             <!--TODO <div class="col-sm-3"><b>Role</b></div>-->
           </div>
@@ -34,9 +34,9 @@
                 <% if (can? :read, user) %>
                   <div class="row index_border_bottom">
                     <!-- grey-border-lr -->
-                    <div class="col-sm-3"><%= user.first_name %></div>
-                    <div class="col-sm-3"><%= user.last_name %></div>
+                    <div class="col-sm-3"><%= "#{user.first_name} #{user.last_name}" %></div>
                     <div class="col-sm-3"><%= user.email %></div>
+                    <div class="col-sm-3"><%= user.role %></div>
                     <div class="col-sm-3">
                       <% if (can? :update, user) %>
                         <%= link_to t(:edit), edit_user_path(user.id) %> &nbsp; <!-- &nbsp; before adding new actions-->
