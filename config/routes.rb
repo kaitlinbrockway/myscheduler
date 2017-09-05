@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     put "/users/:id/edit" => 'users/registrations#update', as: 'update_user'
     delete "users/:id/delete" => 'users/registrations#delete', as: 'delete_user'
   end
+
+  resource :calendar, only: [:show], controller: :calendar
 end

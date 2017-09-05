@@ -31,6 +31,7 @@
 
 en:
   actions: "Actions"
+  calendar: "Calendar"
   cancel: "Cancel"
   create_success_msg: "successfully created!"
   edit: "Edit"
